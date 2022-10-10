@@ -15,6 +15,10 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '6'
 - task: DotNetCoreInstaller@0
   inputs:
     version: '2.2.103' # replace this value with the version that you need for your project
